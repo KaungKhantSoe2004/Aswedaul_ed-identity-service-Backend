@@ -1,0 +1,18 @@
+export const createAdmissions = `CREATE TABLE IF NOT EXISTS admissions (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  age VARCHAR(50) NOT NULL,
+  phone VARCHAR(50) NOT NULL,
+  prevSchool_doc VARCHAR(500),
+  grade VARCHAR(100) NOT NULL,
+  gender VARCHAR(50) NOT NULL,
+  guardianName VARCHAR(255),
+  guardianPhone VARCHAR(50),
+  guardianEmail VARCHAR(255),
+  profile VARCHAR(500),
+  academic_year VARCHAR(9) NOT NULL DEFAULT (YEAR(CURRENT_DATE)),
+
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)`;
